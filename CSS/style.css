@@ -1,9 +1,10 @@
 /* login page */
-*{
+* {
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     margin: 0px;
     padding: 0px;
     height: 100vh;
@@ -11,36 +12,41 @@ body{
     background: linear-gradient(333deg, rgba(0,0,0,1) 0%,rgb(0, 31, 78) 100%); */
     overflow-y: hidden;
 }
-.logincontainer{
+
+.logincontainer {
     height: 400px;
     width: 400px !important;
-    background: rgb(0,50,124);
-    background: linear-gradient(333deg, rgba(0,50,124,1) 0%, rgba(0,0,0,1) 100%);
+    background: rgb(0, 50, 124);
+    background: linear-gradient(333deg, rgba(0, 50, 124, 1) 0%, rgba(0, 0, 0, 1) 100%);
     margin-top: 150px !important;
     padding-top: 50px !important;
     border-radius: 20px;
 }
 
-.input-group{
+.input-group {
     width: 300px !important;
     margin-bottom: 100px !important;
     margin-left: 40px !important;
 }
-.loginbutton{
+
+.loginbutton {
     width: 200px;
     margin-left: 90px;
     background-color: #0198c6 !important;
-    border-color: #0198c6  !important;
+    border-color: #0198c6 !important;
     font-weight: bold !important;
     border-radius: 20px !important;
 }
-.usernameinput{
+
+.usernameinput {
     margin-bottom: 10px !important;
 }
-.passwordinput{
+
+.passwordinput {
     margin-bottom: 30px !important;
 }
-h1{
+
+h1 {
     text-align: center;
     margin-bottom: 40px !important;
     color: white;
@@ -48,39 +54,297 @@ h1{
     font-size: 42px !important;
 }
 
-@media only screen and (max-width:768px){
-    body{
+@media only screen and (max-width:768px) {
+    body {
         /* background: rgb(0,50,124);
         background: linear-gradient(333deg, rgba(0,0,0,1) 0%,rgb(0, 31, 78) 100%); */
         height: 80vh;
     }
+
+    .logincontainer {
+        height: 400px;
+        width: 300px !important;
+        background: rgb(0, 50, 124);
+        background: linear-gradient(333deg, rgba(0, 50, 124, 1) 0%, rgba(0, 0, 0, 1) 100%);
+        margin-top: 150px !important;
+        padding-top: 50px !important;
+        border-radius: 20px;
+    }
+
+    .input-group {
+        width: 250px !important;
+        margin-bottom: 100px !important;
+        margin-left: 20px !important;
+    }
+
+    .loginbutton {
+        width: 200px;
+        margin-left: 40px;
+        background-color: #0198c6 !important;
+        border-color: #0198c6 !important;
+        font-weight: bold !important;
+        border-radius: 20px !important;
+    }
 }
+
 /* login ends */
 /* landing page */
-.landingcontainer{
+a {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+.landingcontainer {
     height: 400px;
     width: 400px !important;
     background-color: white;
-    margin-top: 150px !important;
+    margin-top: 110px !important;
     padding-top: 50px !important;
     border-radius: 20px;
 }
-.landingrow{
+
+.landingrow {
     margin-bottom: 20px !important;
 }
 
-.landingbuttons{
+.landingbuttons {
     padding: 20px !important;
     width: 20rem !important;
     margin-left: 40px;
 }
-.landingbuttonlogout{
+
+.landingbuttonlogout {
     padding: 20px !important;
     width: 20rem !important;
     margin-left: 40px;
+    background-color: rgb(255, 0, 0) !important;
+    border-color: rgb(255, 0, 0) !important;
+
+}
+
+/* check in page */
+.selectcontainer {
+    width: 700px !important;
+    justify-content: center !important;
+}
+
+.checkincontainer {
+    width: 700px !important;
+    height: 650px !important;
+    margin-top: 30px !important;
+    padding-bottom: 40px !important;
+    overflow-y: scroll;
+}
+
+.form-select {
+    margin-top: 30px;
+    /* position: fixed; */
+    width: 650px !important;
+    /* top: 0;
+    left: 28%; */
+}
+
+.innercontain {
+    height: 110px;
+    width: 675px !important;
+    padding-top: 10px !important;
+    /* padding-bottom: 10px !important; */
+    /* background-color: black !important; */
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-top: 20px !important;
+    text-align: center;
+}
+
+.innercontain p {
+    margin-bottom: 10px !important;
+    /* margin-left: 10px !important; */
+    /* margin-top: 40px; */
+}
+/* green dot */
+.blinkcol{
+    display: flex;
+    justify-content: center;
+}
+.blink_me {
+    animation: blinker 1s linear infinite;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border: 1px solid green;
+    background-color: green;
+    border-radius: 100%;
+    margin-top: 42px;
+  }
+  @keyframes blinker {
+    50% {
+      /* opacity: 0.6; */
+      box-shadow: green 0px 5px 15px;
+    }
+  }
+.occupiedstatus{
+    color: green;
+    margin-left: 10px !important;
+    margin-top: 35px !important;
+    display: inline !important;
+}
+
+
+
+.checkinbuttons {
+    padding: 20px !important;
+    width: 12rem !important;
+    margin-top: 15px;
+    float: right;
+}
+
+.addbutton {
+    position: fixed;
+    bottom: 20px;
+    right: 300px;
+    background-color: #000000 !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 50% !important;
+    padding: 5px !important;
+    font-size: 40px !important;
+    height: 80px !important;
+    width: 80px !important;
+    box-shadow: 0 2px 4px rgb(0, 0, 0) !important;
+}
+
+@media only screen and (max-width:768px) {
+
+    .form-select {
+        margin-left: 15px;
+        height: 70px !important;
+        font-size: 30px !important;
+    }
+
+    .checkincontainer {
+        height: 1100px !important;
+        padding-bottom: 10px !important;
+    }
+
+    .innercontain {
+        height: 200px !important;
+    }
+
+    .innercontain p {
+        margin-top: 80px;
+        font-size: 32px;
+    }
+
+    .checkinbuttons {
+        height: 100px;
+        margin-top: 60px;
+        font-size: 30px !important;
+    }
+
+    option {
+        font-size: 12px !important;
+    }
+    .addbutton {
+        bottom: 200px;
+        right: 50px;
+        height: 120px !important;
+        width: 120px !important;
+    }
+}
+
+/* checkin page ends */
+
+/* checkinpassport */
+.checkinpasscontain {
+    width: 600px !important;
+    height: 600px !important;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-top: 80px !important;
+}
+.buttonrow{
+    padding-top: 40px !important;
+}
+.checkinpassbtn{
+    padding: 10px !important;
+    width: 150px !important;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+.qrcontainer{
+    height: 150px !important;
+    width: 150px !important;
     background-color: black !important;
-    border-color: black !important;
+    margin-top: 50px !important;
+}
+.fieldrow{
+    margin-top: 30px !important;
+   margin-left: 1px !important;
+}
+.passinpt{
+    width: 500px !important;
+}
+.nextinbuttons {
+    padding: 10px !important;
+    width: 18rem !important;
+    margin-top: 50px;
+    margin-left: 190px;
+}
+.nextinbuttons:hover{
+    color: white !important;
+}
 
+/* country search */
+.countrypicker{
+    width: 200px !important;
+}
+.caret{
+    display: none !important;
 }
 
 
+@media only screen and (max-width:768px){
+    .checkinpasscontain{
+        height: 1100px !important;
+        margin-top: 200px !important;
+        box-shadow: none !important;
+
+    }
+    .passinpt{
+        width: 500px !important;
+        /* height: 70px !important; */
+    }
+    .fieldrow{
+        margin-top: 70px !important;
+       margin-left: 20px !important;
+    }
+    .forminputs{
+        height: 50px !important;
+        font-size: 20px !important;
+
+    }
+    .dropdown-toggle{
+        font-size: 20px !important;
+    }
+    .nextinbuttons {
+        padding: 10px !important;
+        width: 18rem !important;
+        height: 60px !important;
+        margin-top: 30px;
+        margin-left: 170px !important;
+        font-size: 26px !important;
+    }
+    .caret{
+        display: none !important;
+    }
+}
+
+/* check in 3  */
+
+.checkin3container{
+    width: 600px !important;
+    height: 600px !important;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-top: 80px !important;
+}
+.check3row{
+    padding-top: 50px !important;
+}
